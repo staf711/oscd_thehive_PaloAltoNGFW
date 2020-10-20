@@ -1,13 +1,13 @@
 {
-  "name": "PaloAltoNGFW_unblock_ip",
+  "name": "PaloAltoNGFW_block_internal_IP_address",
   "version": "1.0.0",
   "author": "Maxim Konakin",
   "url": "",
   "license": "AGPL-V3",
-  "description": "Unblock ip",
+  "description": "Block internal IP address",
   "dataTypeList": ["thehive:alert"],
-  "command": "PaloAltoNGFW_unblock_ip/Unblock_ip.py",
-  "baseConfig": "PaloAltoNGFW_unblock_ip",
+  "command": "PaloAltoNGFW_block_internal_IP_address/Block_ip.py",
+  "baseConfig": "PaloAltoNGFW_block_internal_IP_address",
   "configurationItems": [
     {
       "name": "Hostname_PaloAltoNGFW",
@@ -31,32 +31,25 @@
       "required": true
     },
     {
-      "name": "name_internal_Address_Group",
-      "description": "name_internal_Address_Group_for_ip",
-      "type": "string",
-      "multi": false,
-      "required": true
-    },
-     {
       "name": "name_external_Address_Group",
-      "description": "name_external_Address_Group_for_ip",
+      "description": "name_external_Address_Groupp",
       "type": "string",
       "multi": false,
       "required": true
     },
-    {
-      "name": "thehive_instance",
-      "description": "URL of the Thehive instance to query",
-      "type": "string",
-      "multi": false,
-      "required": true
-    },
-    {
-	  "name": "thehive_api_key",
-	  "description": "TheHive API key with read access",
-	  "type": "string",
-	  "multi": false,
-	  "required": true
-    }
+	{
+        "name": "thehive_instance",
+        "description": "URL of the Thehive instance to query",
+        "type": "string",
+        "multi": false,
+        "required": true
+      },
+      {
+        "name": "thehive_api_key",
+        "description": "TheHive API key with read access",
+        "type": "string",
+        "multi": false,
+        "required": true
+      }
   ]
 }

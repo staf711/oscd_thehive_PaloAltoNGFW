@@ -1,5 +1,5 @@
 {
-  "name": "PaloAltoNGFW_block_internal_domain",
+  "name": "PaloAltoNGFW_unblock_domain",
   "version": "1.0.0",
   "author": "Maxim Konakin",
   "url": "",
@@ -31,25 +31,32 @@
       "required": true
     },
     {
-      "name": "name_internal_Address_Group_for_domain",
+      "name": "name_internal_Address_Group",
       "description": "name_internal_Address_Group_for_domain",
       "type": "string",
       "multi": false,
       "required": true
     },
-	{
-        "name": "thehive_instance",
-        "description": "URL of the Thehive instance to query",
-        "type": "string",
-        "multi": false,
-        "required": true
-      },
-      {
-        "name": "thehive_api_key",
-        "description": "TheHive API key with read access",
-        "type": "string",
-        "multi": false,
-        "required": true
-      }
+     {
+      "name": "name_external_Address_Group",
+      "description": "name_external_Address_Group_for_domain",
+      "type": "string",
+      "multi": false,
+      "required": true
+    },
+    {
+      "name": "thehive_instance",
+      "description": "URL of the Thehive instance to query",
+      "type": "string",
+      "multi": false,
+      "required": true
+    },
+    {
+	  "name": "thehive_api_key",
+	  "description": "TheHive API key with read access",
+	  "type": "string",
+	  "multi": false,
+	  "required": true
+    }
   ]
 }
