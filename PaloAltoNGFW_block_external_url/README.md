@@ -10,12 +10,10 @@ need install:
 
 # ToDo
 
-to work, you need to create Address_Group in PaloAltoNGFW and create security polites and name them in  "name_external_Address_Group_for_domain".
-https://docs.paloaltonetworks.com/pan-os/8-1/pan-os-web-interface-help/monitor/monitor-block-ip-list
+to work, you need to create Address_Group in PaloAltoNGFW and create security polites and name them in  "name_external_URL_category".
+
 
 principle of operation:
 1. the value is selected from the alert the hive.
-2. ioc compare against already added AddressObject.
-3. if ioc not in AddressObject, will add
-4. if ioc in AddressObject, next step
-5. checks if there is already a blocking list, if not, ioc will add
+2. ioc compare against already added URL_category.
+3. checks if there is already a blocking list, if not, ioc will add
