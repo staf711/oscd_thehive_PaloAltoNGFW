@@ -23,7 +23,7 @@ class Download_log(Responder):
         ioc=None
         ioc_clear=[]
         for i in list(response.json().get("artifacts")):
-            if 'ip' in str(i):
+            if 'hostname' in str(i):
                 ioc = i.get("data")
                 for i in ioc:
                     if i == "[" or i == "]":
