@@ -31,7 +31,7 @@
       "required": true
     },
     {
-      "name": "name_internal_Address_Group_for_domain",
+      "name": "name_internal_Address_Group",
       "description": "name_internal_Address_Group_for_domain",
       "type": "string",
       "multi": false,

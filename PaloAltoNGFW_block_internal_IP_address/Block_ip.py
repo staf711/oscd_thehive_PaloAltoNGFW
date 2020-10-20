@@ -6,7 +6,7 @@ from thehive4py.api import TheHiveApi
 from panos import firewall
 import panos.objects
 
-class Block_ip(Responder):
+class Download_log(Responder):
     def __init__(self):
         Responder.__init__(self)
         self.hostname_PaloAltoNGFW = self.get_param('config.Hostname_PaloAltoNGFW')
@@ -48,4 +48,4 @@ class Block_ip(Responder):
         self.report({'message': 'message sent'})
 
 if __name__ == '__main__':
-    Block_ip().run()
+    Download_log().run()

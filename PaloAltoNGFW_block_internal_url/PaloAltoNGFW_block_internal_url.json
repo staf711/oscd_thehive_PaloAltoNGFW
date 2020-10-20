@@ -1,13 +1,13 @@
 {
-  "name": "PaloAltoNGFW_block_internal_IP_address",
+  "name": "PaloAltoNGFW_block_internal_url",
   "version": "1.0.0",
   "author": "Maxim Konakin",
   "url": "",
   "license": "AGPL-V3",
-  "description": "Block internal IP address",
+  "description": "Block internal domain",
   "dataTypeList": ["thehive:alert"],
-  "command": "PaloAltoNGFW_block_internal_IP_address/Block_ip.py",
-  "baseConfig": "PaloAltoNGFW_block_internal_IP_address",
+  "command": "PaloAltoNGFW_block_internal_url/Block_url.py",
+  "baseConfig": "PaloAltoNGFW_block_internal_url",
   "configurationItems": [
     {
       "name": "Hostname_PaloAltoNGFW",
@@ -31,8 +31,8 @@
       "required": true
     },
     {
-      "name": "name_external_Address_Group",
-      "description": "name_internal_Address_Group",
+      "name": "name_internal_URL_category",
+      "description": "name_internal_URL_category",
       "type": "string",
       "multi": false,
       "required": true

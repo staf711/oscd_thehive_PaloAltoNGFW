@@ -10,7 +10,7 @@ need install:
 
 # ToDo
 
-to work, you need to create Address_Group in PaloAltoNGFW and create security polites and name them in  "name_external_Address_Group".
+to work, you need to create Address_Group in PaloAltoNGFW and create security polites and name them in  "name_external_Address_Group_for_domain".
 https://docs.paloaltonetworks.com/pan-os/8-1/pan-os-web-interface-help/monitor/monitor-block-ip-list
 
 principle of operation:

@@ -6,13 +6,13 @@ from thehive4py.api import TheHiveApi
 from panos import firewall
 import panos.objects
 
-class Block_domain(Responder):
+class Download_log(Responder):
     def __init__(self):
         Responder.__init__(self)
         self.hostname_PaloAltoNGFW = self.get_param('config.Hostname_PaloAltoNGFW')
         self.User_PaloAltoNGFW = self.get_param('config.User_PaloAltoNGFW')
         self.Password_PaloAltoNGFW = self.get_param('config.Password_PaloAltoNGFW')
-        self.name_external_Address_Group_for_domain = self.get_param('config.name_external_Address_Group_for_domain')
+        self.name_external_Address_Group_for_domain = self.get_param('config.name_external_Address_Group')
         self.thehive_instance = self.get_param('config.thehive_instance')
         self.thehive_api_key = self.get_param('config.thehive_api_key', 'YOUR_KEY_HERE')
         self.api = TheHiveApi(self.thehive_instance, self.thehive_api_key)
@@ -23,7 +23,7 @@ class Block_domain(Responder):
         ioc=None
         ioc_clear=[]
         for i in list(response.json().get("artifacts")):
-            if 'ip' in str(i):
+            if 'hostname' in str(i):
                 ioc = i.get("data")
                 for i in ioc:
                     if i == "[" or i == "]":
@@ -48,4 +48,4 @@ class Block_domain(Responder):
         self.report({'message': 'message sent'})
 
 if __name__ == '__main__':
-    Block_domain().run()
+    Download_log().run()
